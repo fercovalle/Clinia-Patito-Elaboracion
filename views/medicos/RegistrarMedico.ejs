@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <%-include('../headerGeneral');%> 
+  <body>
+    <%-include('../menus/MenuAdministracion');%>
+    <%-include('../menus/MenuSecretaria');%>
+    <h1>Registre un Nuevo Médico</h1>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="doctorName" placeholder="Ingrese nombre del médico" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Número Telefónico</label>
+            <input type="number" class="form-control" id="doctorNumber" placeholder="Ingrese número del médico" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Número de Cuenta</label>
+            <input type="number" class="form-control" id="doctorNumber" placeholder="Ingrese número del médico" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Porcentaje de Regalías</label>
+            <input type="number" class="form-control" id="doctorBonus" placeholder="Ingrese el porcentaje de regalías del médico" required>
+        </div>
+        
+          
+        <button type="submit" class="btn btn-primary" id="btn">Registrar Médico</button>
+      </form>
+      <%-include('../footerGeneral');%>
+  </body>
+</html>

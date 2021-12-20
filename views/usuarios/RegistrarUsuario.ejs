@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <%-include('../headerGeneral');%> 
+  <body>
+    <%-include('../menus/MenuAdministracion');%>
+    <div class="container">
+      <div class="formulario">
+        <h1>Registre un Nuevo Usuario</h1>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">CUI</label>
+          <input type="number" class="form-control" id="userId" placeholder="Ingrese el CUI del empleado" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Rol</label>
+          <input class="form-control" list="datalistOptions" id="userRol" placeholder="Ingrese el rol del empleado" required>
+            <datalist id="datalistOptions">
+              <option value="Administrador">
+              <option value="Laboratorista">
+              <option value="Secretaria">
+            </datalist>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="userName" placeholder="Ingrese un nombre de usuario" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="userPassword" placeholder="Ingrese una contraseña para el usuario" required>
+          </div>
+          
+        <button type="submit" class="btn btn-primary" id="btn">Registrar Usuario</button>
+      </form>
+      </div>
+      <div class="lista"></div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">CUI</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Nombre de Usuario</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>45646548734-7</td>
+            <td>Administrador</td>
+            <td>Jovalle32</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>32154645461-2</td>
+            <td>Secretaria</td>
+            <td>mariaOvalle72</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>351456465465-1</td>
+            <td>Laboratorista</td> 
+            <td>Santis69</td>  
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+      <%-include('../footerGeneral');%>
+  </body>
+</html>

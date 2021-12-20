@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+
+  <%-include('../headerGeneral');%> 
+
+  <body>
+    <%-include('../menus/MenuSecretaria');%>
+    <%-include('../menus/MenuAdministracion');%>
+
+    <h1>Ingrese los datos del paciente</h1>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">CUI</label>
+          <input type="number" class="form-control" id="cuiPacient" placeholder="Ingrese CUI" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Nombres</label>
+          <input type="text" class="form-control" id="pacientName" placeholder="Ingrese Nombres" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="pacientLastName" placeholder="Ingrese Apellidos" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Sexo</label>
+            <input class="form-control" list="datalistOptions" id="pacientSex" placeholder="Ingrese su sexo" required>
+            <datalist id="datalistOptions">
+              <option value="Hombre">
+              <option value="Mujer">
+              <option value="Otro">
+            </datalist>
+        </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="pacientDate" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Número Telefónico</label>
+            <input type="number" class="form-control" id="pacientNumber" placeholder="Ingrese Número Telefónico" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="pacientEmail" placeholder="Ingrese Correo Electrónico" required>
+          </div>
+        <button type="submit" class="btn btn-primary" id="btn">Registrar Paciente</button>
+      </form>
+
+      <%-include('../footerGeneral');%>
+  </body>
+</html>
